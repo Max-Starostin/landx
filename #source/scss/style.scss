@@ -15,6 +15,7 @@ body{
     position: relative;
     width: 30px;
     height: 25px;
+    cursor:pointer;
     display: none;
     & span{
         position: absolute;
@@ -124,7 +125,7 @@ body{
             height: 100vh;
         }
         @media (max-width:$breakpointsm) {
-            height: 130vh;
+            height: 160vh;
             
         }
 }
