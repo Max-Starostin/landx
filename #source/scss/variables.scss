@@ -1,0 +1,75 @@
+$frwregular:400;
+$fwmedium:500;
+$fwsolidbold:600;
+$fwbold:700;
+$bluecolor:#0199e6;
+$placeholder:#e5e5e5;
+
+$breakpointxs: 420px;
+$breakpointsm: 576px;
+$breakpointmd: 768px;
+$breakpointlg: 992px;
+$breakpointxl: 1200px;
+$breakpointxxl: 1400px;
+
+%title{
+    font-size: 2.8rem;
+    line-height: 60px;
+    color: #ffffff;
+    font-weight: $fwmedium;
+    text-align: center;
+        & .bold-blue{
+            color: $bluecolor;
+            font-weight: $fwsolidbold ;
+        }
+        & .bold-white{
+            font-weight: $fwsolidbold ;
+        }
+}
+
+%subtitle{
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: $frwregular;
+    font-family: "Source Sans Pro";
+    text-align: center;
+}
+
+%input{
+    width: 13.4rem;
+    height: 3.4rem;
+    background-color: #000;
+    border: 1px solid rgba(1,153,230,0.3);
+    border-left: 3px solid $bluecolor;
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Source Sans Pro";
+    margin-right: 21px;
+    padding-left: 1.3rem;
+        &::-moz-placeholder{
+            color: $placeholder;
+        }
+        &::-webkit-input-placeholder{
+            color:$placeholder;
+        }
+}
+
+%inputbutton{
+    font-size: 1rem;
+    width: 11.4rem;
+    height: 3.4rem;
+    border-radius: 2px;
+    background-color: #008ed6;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: $fwbold;
+}
+
+%text{
+    font-size: 1rem;
+    line-height: 25px;
+    color: #727272;
+    font-weight: $frwregular;
+    font-family: "Source Sans Pro";
+}

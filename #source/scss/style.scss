@@ -1,0 +1,331 @@
+@import "../scss/nullstyle";
+@import "../scss/variables";
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.burger-menu{
+    position: relative;
+    width: 30px;
+    height: 25px;
+    display: none;
+    & span{
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $bluecolor;
+        top: 11px;
+        right: 0;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $bluecolor;
+        top: 0;
+        right: 0;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $bluecolor;
+        bottom: 0;
+        right: 0;
+    }
+    @media (max-width:$breakpointmd) {
+        display: block;
+        margin: 20px 0px 0px 20px;
+    }
+}
+
+.header{
+    & .container{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    background: url('../img/header/header-bg.png') no-repeat center / cover;
+    width: 100%;
+    height: 80vh;
+        &__link img {
+            width: 25px;
+            height: 25px;
+        }
+        &__links{
+            justify-self: end;
+        }
+        &__title{
+            @extend %title;
+            margin: 47px 0px;
+            justify-self: center;
+            @media (max-width:$breakpointmd) {
+                margin: 0px;
+            }
+        }
+        &__subtitle{
+            @extend %subtitle;
+            justify-self: center;
+            width: 43rem;
+            margin: 0 auto;
+            @media (max-width:$breakpointmd) {
+                width: auto;
+            }
+        }
+        &__form{
+            width: 59rem;
+            height: 6.3rem;
+            padding: 20px 0px 0px 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-self: center;
+                &-name{
+                    @extend %input;
+                    @media (max-width:$breakpointmd) {
+                        margin: 50px 0px 10px 0px;
+                    }
+                }
+                &-email{
+                    @extend %input;
+                    @media (max-width:$breakpointmd) {
+                        margin: 0px 0px 10px 0px;
+                    }
+                }
+                &-tel{
+                    @extend %input;
+                    @media (max-width:$breakpointmd) {
+                        margin-right: 0px
+                    }
+                }
+                &-button{
+                    @extend %inputbutton;
+                    @media (max-width:$breakpointmd) {
+                        width: 13.4rem;
+                    }
+                }
+                @media (max-width:$breakpointlg) {
+                    width: auto;
+                    background: none;
+                    padding: 0px 40px;
+                    &-button{
+                        margin: 0 auto;
+                        margin-top: 10px;
+                    }
+                }
+        }
+        @media (max-width:$breakpointxl){
+            height: 100vh;
+        }
+        @media (max-width:$breakpointsm) {
+            height: 130vh;
+            
+        }
+}
+
+.navigation{
+    padding: 0px 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top:50px;
+    @media (max-width:$breakpointmd) {
+        display: none;
+    }
+}
+
+.explore{
+    &:nth-child(3){
+        background-color: #f7f8fa7a;
+    }
+    padding: 100px 10px;
+    & .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 53px;
+    }
+    &__browser{
+        justify-self: center;
+    }
+
+    &__title{
+        @extend %title;
+        color: #323232;
+        font-size: 2.18rem;
+        text-align: left;
+        position: relative;
+            &::before{
+                content: '';
+                bottom: 0;
+                margin-bottom: -10px;
+                position: absolute;
+                width: 68px;
+                height: 1px;
+                background-color: #0199e6;
+            }
+    }
+
+    &__subtitle,&__subtitle2,&__subtitle3,&__subtitle4{
+        @extend %subtitle;
+        position: relative;
+        color: #000;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 25px;
+        font-weight: $fwbold;
+    }
+
+    &__subtitle{
+        &::before{
+            content: url('../img/section(explore)/item1.png');
+            padding-top: 6px;
+            margin-left: -50px;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    &__subtitle2{
+        &::before{
+            content: url('../img/section(explore)/item2.png');
+            padding-top: 6px;
+            margin-left: -50px;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    &__subtitle3{
+        &::before{
+            content: url('../img/section(explore)/item3.png');
+            padding-top: 6px;
+            margin-left: -50px;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    &__subtitle4{
+        &::before{
+            content: url('../img/section(explore)/item4.png');
+            padding-top: 6px;
+            margin-left: -50px;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__text{
+        @extend %text;
+    }
+
+    &__item{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
+    }
+    &__items{
+        padding: 0px 0px 0px 50px;
+    }
+
+    @media (max-width:$breakpointlg) {
+        &__browser{
+            display: none;
+        }
+        &__item{
+            width: 100%;
+        }
+        & .container{
+            display: block;
+        }
+        &__title{
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+            &::before{
+                content:"";
+                left: 48%;
+            }
+        }
+        &__text{
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    @media (max-width:$breakpointxs) {
+        &__title{
+            &::before{
+                content:"";
+                left: 40%;
+            }
+        }
+    }
+}
+
+.features{
+    padding: 110px 0px;
+    &__title{
+        @extend %title;
+        width: 16rem;
+        margin: 0 auto;
+        font-size: 2.18rem;
+        color: #323232;
+        margin-bottom: 2.8rem;
+        position: relative;
+        &::before{
+            content: '';
+            bottom: 0;
+            margin-bottom: -10px;
+            left: 90px;
+            position: absolute;
+            width: 68px;
+            height: 1px;
+            background-color: #0199e6;
+        }
+    }
+    &__text{
+        @extend %text;
+        text-align: center;
+    }
+    &__subtitle{
+        @extend %text;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &__table{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        row-gap: 5.3rem;
+        @media (min-width:$breakpointsm) {
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+            row-gap: 5.3rem;
+        }
+        @media (max-width:$breakpointsm) {
+            grid-template-columns: none;
+            grid-template-rows: repeat(6,1fr);
+            row-gap: 5.3rem;
+        }
+    }
+    &__item{
+        padding:0px 20px;
+        &-title{
+            @extend %subtitle;
+            font-size: 1.25rem;
+            color: #323232;
+            font-weight: $fwsolidbold;
+            margin-bottom: 1rem;
+        }
+    }
+    &__icon{
+        margin: 0 auto;
+        margin-bottom: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+}
