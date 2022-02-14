@@ -152,6 +152,7 @@ body {
   position: relative;
   width: 30px;
   height: 25px;
+  cursor: pointer;
   display: none;
 }
 
@@ -292,7 +293,7 @@ body {
 
 @media (max-width: 576px) {
   .header {
-    height: 130vh;
+    height: 160vh;
   }
 }
 
