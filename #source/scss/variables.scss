@@ -73,3 +73,16 @@ $breakpointxxl: 1400px;
     font-weight: $frwregular;
     font-family: "Source Sans Pro";
 }
+
+%button{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    font-size: 1rem;
+    border: 1px solid #727272;
+    border-radius: 3px;
+    color: #727272;
+    font-weight: $fwbold;
+    text-align: center;
+    text-transform: uppercase;
+}
