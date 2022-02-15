@@ -73,24 +73,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.header__title, .explore__title, .features__title, .pricing__title, .video__title, .products__title {
+.header__title, .explore__title, .features__title, .pricing__title, .video__title, .products__title, .testimonials__title {
   font-size: 2.8rem;
   line-height: 60px;
-  color: #ffffff;
+  color: #fff;
   font-weight: 500;
   text-align: center;
 }
 
-.header__title .bold-blue, .explore__title .bold-blue, .features__title .bold-blue, .pricing__title .bold-blue, .video__title .bold-blue, .products__title .bold-blue {
+.header__title .bold-blue, .explore__title .bold-blue, .features__title .bold-blue, .pricing__title .bold-blue, .video__title .bold-blue, .products__title .bold-blue, .testimonials__title .bold-blue {
   color: #0199e6;
   font-weight: 600;
 }
 
-.header__title .bold-white, .explore__title .bold-white, .features__title .bold-white, .pricing__title .bold-white, .video__title .bold-white, .products__title .bold-white {
+.header__title .bold-white, .explore__title .bold-white, .features__title .bold-white, .pricing__title .bold-white, .video__title .bold-white, .products__title .bold-white, .testimonials__title .bold-white {
   font-weight: 600;
 }
 
-.header__subtitle, .explore__subtitle, .explore__subtitle2, .explore__subtitle3, .explore__subtitle4, .features__item-title {
+.header__subtitle, .explore__subtitle, .explore__subtitle2, .explore__subtitle3, .explore__subtitle4, .features__item-title, .help__subtitle {
   font-size: 1.2rem;
   line-height: 30px;
   color: #ffffff;
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.explore__text, .features__text, .features__subtitle, .pricing__subtitle, .video__subtitle, .products__subtitle {
+.explore__text, .features__text, .features__subtitle, .pricing__subtitle, .video__subtitle, .products__subtitle, .testimonials__subtitle, .testimonials__text, .testimonials__work {
   font-size: 1rem;
   line-height: 25px;
   color: #727272;
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro";
 }
 
-.pricing__table-button, .pricing__table-button-blue {
+.pricing__table-button, .pricing__table-button-blue, .help__button {
   width: 100px;
   height: 40px;
   display: inline-block;
@@ -865,4 +865,189 @@ body {
   .products__item img {
     width: 100%;
   }
+}
+
+.testimonials {
+  padding: 110px 0px;
+}
+
+@media (max-width: 420px) {
+  .testimonials .container {
+    padding: 0px 10px;
+  }
+}
+
+.testimonials__title {
+  width: 25rem;
+  margin: 0 auto;
+  font-size: 2.18rem;
+  color: #323232;
+  margin-bottom: 2.8rem;
+  position: relative;
+}
+
+.testimonials__title::before {
+  content: '';
+  bottom: 0;
+  margin-bottom: -10px;
+  left: 150px;
+  position: absolute;
+  width: 68px;
+  height: 1px;
+  background-color: #0199e6;
+}
+
+@media (max-width: 576px) {
+  .testimonials__title {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .testimonials__title {
+    width: 20rem;
+  }
+  .testimonials__title::before {
+    left: 130px;
+  }
+}
+
+.testimonials__subtitle {
+  color: #323232;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.testimonials__brands {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 576px) {
+  .testimonials__brands {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    row-gap: 30px;
+  }
+}
+
+.testimonials__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  padding: 0px 15px;
+}
+
+@media (max-width: 576px) {
+  .testimonials__row {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    row-gap: 50px;
+    padding: 0px 15px;
+  }
+}
+
+.testimonials__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5fr 1fr;
+      grid-template-rows: 5fr 1fr;
+  row-gap: 30px;
+}
+
+.testimonials__icon {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  margin-top: -50px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.testimonials__text {
+  position: relative;
+  padding: 25px 30px;
+  text-align: center;
+  font-style: italic;
+  background-color: #f7f7fa;
+  border-radius: 3px;
+  -webkit-filter: drop-shadow(0px 2px 0px #e5e5e5);
+          filter: drop-shadow(0px 2px 0px #e5e5e5);
+}
+
+.testimonials__name {
+  display: block;
+  color: #0199e6;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.testimonials__work {
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.help {
+  padding: 100px 15px;
+  background: url("../img/help/bg.png") no-repeat center/cover;
+  height: 450px;
+}
+
+.help .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.help__subtitle {
+  font-size: 1.25rem;
+  line-height: 60px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.help__title {
+  font-size: 2.18rem;
+  line-height: 65px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.help__button {
+  position: relative;
+  width: 184px;
+  height: 54px;
+  border-radius: 2px;
+  padding-top: 20px;
+  border: 0px;
+  color: #fff;
+  background-color: #008ed6;
+  margin-top: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.help__button::after {
+  position: absolute;
+  content: url("../img/help/button-row.png");
+  padding-left: 10px;
 }
