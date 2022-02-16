@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.explore__text, .features__text, .features__subtitle, .pricing__subtitle, .video__subtitle, .products__subtitle, .testimonials__subtitle, .testimonials__text, .testimonials__work {
+.explore__text, .features__text, .features__subtitle, .pricing__subtitle, .video__subtitle, .products__subtitle, .testimonials__subtitle, .testimonials__text, .testimonials__work, .footer__text {
   font-size: 1rem;
   line-height: 25px;
   color: #727272;
@@ -788,6 +788,15 @@ body {
   background-color: #0199e6;
 }
 
+@media (max-width: 420px) {
+  .products__title {
+    width: 20rem;
+  }
+  .products__title::before {
+    left: 130px;
+  }
+}
+
 .products__subtitle {
   color: #323232;
   text-align: center;
@@ -1050,4 +1059,63 @@ body {
   position: absolute;
   content: url("../img/help/button-row.png");
   padding-left: 10px;
+}
+
+@media (max-width: 576px) {
+  .help {
+    padding-top: 60px;
+  }
+}
+
+.footer__contact {
+  padding: 85px 0px;
+}
+
+.footer__contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__title {
+  color: #323232;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.footer__links {
+  background-color: #f7f8fa;
+  padding: 70px 0px 90px 0px;
+}
+
+.footer__links .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  line-height: 30px;
+  margin: 10px 0px;
+}
+
+.footer__link {
+  width: 26px;
+  height: 26px;
 }
