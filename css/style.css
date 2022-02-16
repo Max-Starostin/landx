@@ -298,6 +298,10 @@ body {
   }
 }
 
+.header__form:focus-within {
+  padding: 0px;
+}
+
 @media (max-width: 1200px) {
   .header {
     height: 100vh;
