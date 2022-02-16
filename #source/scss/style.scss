@@ -123,6 +123,7 @@ body{
                 }
                 @media (max-width:$breakpointlg) {
                     width: auto;
+                    height: auto;
                     background: none;
                     padding: 0px 40px;
                     &-button{
@@ -132,7 +133,7 @@ body{
                 }
         }
         @media (max-width:$breakpointxl){
-            height: 100vh;
+            height: 800px;
         }
         @media (max-width:$breakpointmd) {
             padding-top: 20px;
