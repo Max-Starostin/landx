@@ -307,6 +307,7 @@ body {
 @media (max-width: 992px) {
   .header__form {
     width: auto;
+    height: auto;
     background: none;
     padding: 0px 40px;
   }
@@ -318,7 +319,7 @@ body {
 
 @media (max-width: 1200px) {
   .header {
-    height: 100vh;
+    height: 800px;
   }
 }
 
