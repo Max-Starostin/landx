@@ -45,7 +45,7 @@ body{
     }
     @media (max-width:$breakpointmd) {
         display: block;
-        margin: 20px 0px 0px 20px;
+        margin:0px 0px 30px 20px;
     }
 }
 
@@ -53,6 +53,10 @@ body{
     & .container{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+        @media (max-width:$breakpointsm) {
+            display: block;
+        }
+
     }
     background: url('../img/header/header-bg.png') no-repeat center / cover;
     width: 100%;
@@ -63,13 +67,16 @@ body{
         }
         &__links{
             justify-self: end;
+            @media (max-width:$breakpointlg) {
+                padding: 0px 20px;
+            }
         }
         &__title{
             @extend %title;
             margin: 47px 0px;
             justify-self: center;
             @media (max-width:$breakpointmd) {
-                margin: 0px;
+                margin: 20px 0px;
             }
         }
         &__subtitle{
@@ -79,6 +86,9 @@ body{
             margin: 0 auto;
             @media (max-width:$breakpointmd) {
                 width: auto;
+            }
+            @media (max-width:$breakpointmd) {
+                padding: 0px 15px;
             }
         }
         &__form{
@@ -120,15 +130,12 @@ body{
                         margin-top: 10px;
                     }
                 }
-                &:focus-within{
-                    padding: 0px;
-                }
         }
         @media (max-width:$breakpointxl){
             height: 100vh;
         }
-        @media (max-width:$breakpointsm) {
-            height: 160vh;
+        @media (max-width:$breakpointmd) {
+            padding-top: 20px;
         }
 }
 
